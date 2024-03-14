@@ -1,0 +1,18 @@
+cách tạo môi trường code typescript
+
+Cách 1: chạy bằng trình duyệt
+B1: gõ tsc + tên file .ts muốn chạy(sẽ tự tạo ra file .js tương ứng)
+B2: import file js vừa tạo vào file .html để chyaj lên trình duyệt
+
+Cách 2: chạy bằng terminal : gõ node + tên file .js
+
+Cách 3: chạy bằng terminal(không cần tạo file .js) : gõ ts-node + tên file .ts
+
+- Lưu ý khi khởi tạo biến trong typescript
+ 
+let name: string = "vinh"
+trong đó 
+let : 
+name : tên biến
+string(chuỗi): kiểu dữ liệu
+"vinh" : dữ liệu mặc định 

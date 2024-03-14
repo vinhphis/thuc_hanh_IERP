@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // lưu ý :
+    // break : kết thúc vòng lặp
+    // continue : khi chạy vào câu này thì sẽ không chạy xuống dưới và bắt đầu lại vòng lặp
+    var myObject = {
+        name: "quang vinh",
+        age: "20",
+        address: "HN"
+    };
+    // for in : dùng để lấy ra key trong mảng hay object
+    for (var key in myObject) {
+        console.log(key);
+    }
+
+    // for of : dùng để lấy ra value trong mảng
+    // cách để chuyển đổi object thành mảng key
+    var myArrKey = Object.keys(myObject);
+
+    // cách để chuyển đổi object thành mảng value
+    var myArrValue = Object.values(myObject);
+    console.log(typeof myArrValue);
+    for (var key of myArrKey) {
+        console.log("Các key ở trong mảng :" + key);
+    }
+
+    for (var value of myArrValue) {
+        console.log("Các value ở trong mảng :" + value);
+    }
+
+
+</script>
+
+</html>

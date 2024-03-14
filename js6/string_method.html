@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>lenght : đếm chuỗi có bao nhiêu kí tự</p>
+    <p>indexOf : tìm kiếm trong chuỗi xem có ký tự này ở vị trí nào</p>
+    <p>slice : cắt chuỗi</p>
+    <p>replace : thay thế 1 đoạn chuỗi trong chuỗi bằng 1 đoạn chuỗi mới</p>
+</body>
+<script>
+    var fullName = "phi quang vinh vinh";
+
+    console.log("Chuỗi trên có: " + fullName.length);
+
+    console.log("Vị trí ký tự trong chuỗi: " + fullName.indexOf('vinh', fullName.indexOf('vinh') + 1)); // nếu tìm thấy thì trả về vị trí còn không tìm thấy thì trả về -1
+    // trong indexOf(string, position)
+    // string : chuỗi cần tìm kiếm, position: vị trí bắt đầu tìm kiếm
+
+    console.log(fullName.lastIndexOf('vinh'));
+    // tìm ra ký tự ở cuối chuỗi
+
+    console.log("Cắt chữ quang trong chuỗi: " + fullName.slice(4, 9));
+    // trong slice(start,end)
+    // start : vị trí bắt đầu cắt ký tự, end: vị trí kết thúc ký tự
+
+    console.log(fullName.replace(/vinh/g, "111"));
+    // replace(string,newString)
+    // string: ký tự cần tìm trong chuỗi, newString: ký tự mới
+    //thay thế đoạn chuỗi ban đầu thành 1 đoạn chuỗi khác
+
+
+</script>
+
+</html>

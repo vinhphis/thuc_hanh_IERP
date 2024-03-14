@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // spead : dùng để tách biệt các phần tử của mảng hoặc đối tượng thành các phần tử riêng lẻ
+    var age = [1, 3, 2, 34, 5];
+    var ageNew = [...age, 5, 3];
+
+    // console.log(ageNew);
+
+    // rest : cho phép bạn đại diện cho 1 số lượng phần tử không xác định dưới tham số là 1 mảng
+    function sumAge(...param) {
+        let total = 0;
+        for (var value of param) {
+            total += value;
+            console.log(value);
+        }
+        return total;
+    }
+
+    console.log(sumAge(1, 3, 2, 34, 5));
+</script>
+
+</html>

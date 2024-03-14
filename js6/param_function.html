@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function displayArr() {
+        var myString = "";
+        console.log(arguments); // sử dụng trong hàm và không cần định nghĩa tham số truyền vào
+        for (var param of arguments) {
+            myString += `-${param}`
+        }
+        console.log(myString);
+    }
+   
+    displayArr("vinh", "quang", "phi")
+</script>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const myArr = [
+        'quang',
+        'vinh',
+        'phi',
+    ];
+    const myArr2 = [
+        '28',
+        '08',
+        '2004',
+    ];
+    console.log(myArr);
+
+    // toString : chuyển mảng thành chuỗi
+    console.log(myArr.toString());
+
+    // join : cắt phần tử trong mảng thành chuỗi(có thể tùy chỉnh khoảng cách giữa các phần tử trong chuỗi) 
+    console.log(myArr.join(''));
+    console.log(myArr.join('-'));
+
+    // pop : xóa phần tử ở cuối mảng và trả về phần tử vừa xóa
+    console.log(myArr.pop());
+
+    //push : thêm phần tử vào cuối mảng và trả về độ dài mới của mảng
+    console.log(myArr.push('hihi', 'haha'));
+    console.log(myArr);
+
+    //shift : xóa 1 phần tử ở đầu trong mảng và trả về phần tử vừa xóa
+    console.log(myArr.shift());
+    console.log(myArr);
+
+    //unShift : thêm 1 hoặc nhiều phần tử vào đầu mảng, trả về độ dài mới của mảng
+    console.log(myArr.unshift('28', '08'));
+    console.log(myArr);
+
+    // splicing : có thể xóa hoặc chèn thêm phần tử vào mảng
+    // splice(start,deleteCount,newString)
+    // start : vị trí bắt đầu, deleteCount: số phần tử muốn xóa, newString: chuỗi mới muốn chèn vào
+    myArr.splice(1, 1); // xóa phần tử từ vị trí thứ 1 và xóa 1 phần tử
+    console.log(myArr);
+    myArr.splice(1, 0, '16'); // thêm phần tử 16 vào vị trí thứ 1 trong mảng
+    console.log(myArr);
+    myArr.splice(0);
+    console.log(myArr);
+    
+    // concat: kết hợp 1 hay nhiều mảng vào 1 mảng
+    console.log(myArr.concat(myArr2));
+
+
+</script>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // var array = [
+    //     {
+    //         id: "1",
+    //         name: "php",
+    //         coins: 1000
+    //     },
+    //     {
+    //         id: "2",
+    //         name: "js",
+    //         coins: 0
+    //     },
+    //     {
+    //         id: "3",
+    //         name: "html,css",
+    //         coins: 0
+    //     },
+    //     {
+    //         id: "4",
+    //         name: "java",
+    //         coins: 0
+    //     },
+    //     {
+    //         id: "5",
+    //         name: "php",
+    //         coins: 5000
+    //     }
+    // ]
+    var array = new Array(100);
+    array.push('js','php')
+    Array.prototype.forEach2 = function (callback) {
+
+
+        for (var i in this) {
+            if(this.hasOwnProperty(i)){
+                callback(this[i],i,this)
+            }
+            
+        }
+    }
+
+    var course = array.forEach2(function (course, index, arrayOld) {
+        console.log(course, index,arrayOld);
+    })
+</script>
+
+</html>

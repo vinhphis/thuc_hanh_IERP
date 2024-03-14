@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text"></p>
+</body>
+<script>
+    var myObject = [
+        {
+            id: "1",
+            name: "php",
+            coins: 1000
+        },
+        {
+            id: "2",
+            name: "js",
+            coins: 0
+        },
+        {
+            id: "3",
+            name: "html,css",
+            coins: 0
+        },
+        {
+            id: "4",
+            name: "java",
+            coins: 0
+        },
+        {
+            id: "5",
+            name: "php",
+            coins: 5000
+        }
+    ];
+
+    // duyệt mảng
+    myObject.forEach(function (course, index) {
+        console.log(index, course);
+    })
+
+    // dùng để kiểm tra trong mảng phải thỏa mãn điều kiện nào đó nếu mà đúng thì trả về true còn ngược lại sẽ trả về false
+    var freeCoins = myObject.every(function (course, index) {
+        return course.coins == 0;
+    })
+    console.log(freeCoins); // true
+
+    // dùng để kiểm tra trong mảng chỉ cần 1 dk đúng là kết thúc nếu đúng thì trả về true ngược lại sẽ trả về false
+    var nameCourse = myObject.some(function (course) {
+        return course.name == 'php4';
+    })
+    console.log(nameCourse); // false
+
+    // dùng để tìm kiếm trong mảng nếu đk đúng thì sẽ trả về mảng chứa nó đó ngược lại sẽ trả về undefined (chỉ trả về 1 đối tượng)
+    var nameCourses = myObject.find(function (course) {
+        return course.name == 'php';
+    })
+    console.log(nameCourses); // true
+
+    // dùng để tìm kiếm trong mảng nếu đk đúng thì sẽ trả về mảng chứa nó đó ngược lại sẽ trả về undefined ( trả về nhiều đối tượng)
+    var listCourses = myObject.filter(function (course) {
+        return course.name == 'php';
+    })
+    console.log(listCourses); // true
+
+    // có thể tùy biến mảng mới từ mảng có sẵn
+    var courses = myObject.map(function (course) {
+        return {
+            id: course.id,
+            name: `khóa học : ${course.name}`,
+            coins: course.coins,
+            coinsText: `coinsText : ${course.coins}`
+        };
+    })
+    var display = myObject.map(function (course) {
+        return `<h1>${course.name}</h1>`;
+    })
+    const text = document.getElementById('text')
+    text.innerHTML = display.join('');
+
+
+    // reduce (function(),storage): 
+    // function(biến lưu trữ = giá trị khởi tạo, giá trị truyền vào, chỉ mục của phần tử đó trong mảng, mảng cũ = với mảng truyền vào)
+    // storage: giá trị khởi tạo
+    var sumCoins = myObject.reduce(function (arguments, myObject) {
+        var total = myObject.coins + arguments;
+        return total;
+    }, 100); // giá trị mặc định
+
+    console.log(sumCoins);
+
+   
+</script>
+
+</html>

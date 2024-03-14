@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // cách thêm key trong object
+    //cách 1
+    var addressKey = 'address'
+    var myObject = {
+        name: "quang vinh",
+        age: "20",
+        [addressKey]: "HN",
+        profile: function () {
+            return `${this.name}  ${this.age}`;
+        }
+    };
+
+    // cách 2
+    myObject.email = "vinh@gmail.com";
+
+    console.log(myObject);
+    //cách để xóa key trong object
+    // delete myObject.age;
+
+    console.log(myObject);
+    console.log(myObject.profile()); // cách gọi giá trị trong object
+</script>
+
+</html>
